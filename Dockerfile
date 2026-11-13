@@ -2,7 +2,8 @@
 # Stage 1: Build the Angular Application
 # =========================================
 
-# Use a lightweight DHI Node.js image for building
+# Use a lightweight DHI (Docker Hardened Images) Node.js image for building
+# Use the DHI image (dhi.io/node:tag) in prod because this versions is for secure builds (needs account). In dev use the Dockerhub public images node:tag
 FROM node:24-alpine3.24 AS builder
 
 # Set the working directory inside the container
